@@ -1,29 +1,28 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      QR Code App
-    </ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Zoo Bauru</ion-title>
   </ion-navbar>
 </ion-header>
- 
+
 <ion-content padding>
-  <ion-item>
-    <ion-input type="text" placeholder="QR Code data" [(ngModel)]="qrData">
-    </ion-input>
-  </ion-item>
-  <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Criar qr</button>
-  <button ion-button full icon-left (click)="scanCode()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan qr</button>
- 
-  <ion-card *ngIf="createdCode">
-    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
-    <ion-card-content>
-      <p>Value: {{ createdCode }}</p>
-    </ion-card-content>
-  </ion-card>
- 
-  <ion-card *ngIf="scannedCode">
-    <ion-card-content>
-      Resultado do Scan: {{ scannedCode }}
-    </ion-card-content>
-  </ion-card>
+  <h3>App do Zoo Bauru</h3>
+    <img src="./download.jpg" alt="Zoo Bauru" />
+  <p class="md">Um pouco de sua história
+      O Parque Zoológico Municipal de Bauru, é através de sua curta história, um dos Zoos de maior destaque do País,
+       tanto pela sua estrutura, como pelo seu sentido ecológico, o que vem despertando cada vez mais, 
+       a atenção das pessoas de Bauru e da região e a níveis Estadual e Nacional, por ser pioneiro em alguns 
+       projetos e  diferente dos demais em seus objetivos. </p> <p class="md"> Tendo início as obras de construção em 1977, 
+        o Zoo foi inaugurado em 24 de agosto de 1980 com um número pequeno de animais, parte deles vindos do 
+        Zoológico da cidade de Bastos que acabava de ser desativado. Possuindo área de 20 alq., inserido em 
+        uma área de cerrado de mais de 200 alqueires, o Zoo Municipal pôde se expandir através dos anos, 
+        chegando hoje a ser em qualidade, um dos melhores do país. 
+  </p>
+  <p class="md">
+    Para mais informações entre em:  <a href="http://zoobauru.com.br/v2/"> Site Zoo </a>.
+  </p>
+
+  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
 </ion-content>

@@ -1,3 +1,17 @@
-page-home {
+page-home { 
+   p {
+        font-size: 20px; 
+        text-align: justify;
+   }
 
+   h3 {
+       text-transform: uppercase;
+       text-align: center;
+   }
+
+   img {
+       width: 80%; 
+       height: 200px; 
+       align-content: center;
+   }
 }
