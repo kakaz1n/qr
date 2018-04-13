@@ -18,7 +18,10 @@ export class HomePage {
   }
   async sayText(): Promise<any>{
     try{
-      await this.tts.speak(this.scannedCode); //text
+      await this.tts.speak({
+        text : this.scannedCode,//text
+        locale: 'pt-BR'//adicionando local brasil pra voz
+      }); 
       console.log("falou" + this.scannedCode); //text
     }
     catch(e){
