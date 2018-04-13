@@ -23,7 +23,14 @@
   </ion-item>
   <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Criar qr</button>
    <p> Para obter as informações do animal, aproxime a camera e escaneie o qr code na placa </p>
-   <button ion-button full icon-left (click)="scanCode()" color="blue"> Aproxime </button> 
+   <button ion-button full icon-left (click)="scanCode()" color="blue"> Aproxime </button>
+   
+   <ion-card *ngIf="createdCode">
+    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    <ion-card-content>
+      <p>Value: {{ createdCode }}</p>
+    </ion-card-content>
+  </ion-card>
     
 
   <ion-card *ngIf="scannedCode">
