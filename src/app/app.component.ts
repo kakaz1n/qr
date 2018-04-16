@@ -12,6 +12,7 @@ import { RegrasPage } from '../pages/regras/regras';
 import { EventosPage } from '../pages/eventos/eventos';
 import { NarracaoPage } from '../pages/narracao/narracao';
 import { SobreOAppPage } from '../pages/sobre-o-app/sobre-o-app';
+import { ConfigPage } from '../pages/config/config'; 
 
 @Component({
   templateUrl: 'app.html'
@@ -21,22 +22,23 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Sobre o Zoo', component: HomePage },
+      { title: 'Sobre o Zoo', component: HomePage, icon: "help" },
       //{ title: 'Leitor', component: LeitorPage },
-      { title: 'Recintos', component: RecintosPage },
-      { title: 'Ingressos e Horarios', component: HorariosPage },
-      { title: 'Como chegar', component: LocalPage },
-      { title: 'Regras do zoo', component: RegrasPage },
-      { title: 'Eventos', component: EventosPage },
-      { title: 'Audio Narração', component: NarracaoPage },
-      { title: 'Sobre o App', component: SobreOAppPage }
+      { title: 'Recintos', component: RecintosPage, icon: "planet" },
+      { title: 'Ingressos e Horarios', component: HorariosPage, icon: "time" },
+      { title: 'Como chegar', component: LocalPage, icon: "pin" },
+      { title: 'Regras do zoo', component: RegrasPage, icon: "book" },
+      { title: 'Eventos', component: EventosPage, icon: "basket" },
+      { title: 'Audio Narração', component: NarracaoPage, icon: "musical-notes" },
+      { title: 'Sobre o App', component: SobreOAppPage, icon: "information-circle" },
+      { title: 'Configurações', component: ConfigPage, icon: "settings"}
     ];
   }
 

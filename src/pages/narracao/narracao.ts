@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the NarracaoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { TextToSpeech } from '@ionic-native/text-to-speech'
 
 @IonicPage()
 @Component({
@@ -15,11 +10,35 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NarracaoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NarracaoPage');
-  }
+  qrData = null;
+    createdCode = null;
+    scannedCode = null;
+    text: string; //texto seria o qrData
+    constructor(private barcodeScanner: BarcodeScanner, private tts: TextToSpeech) { }
+   
+    createCode() {
+      this.createdCode = this.qrData;  //qrData => variavel de texto pra enviar pro qr code
+    }
+    async sayText(): Promise<any>{
+      try{
+        await this.tts.speak({
+          text : this.scannedCode,//text
+          locale: 'pt-BR'//adicionando local brasil pra voz
+        }); 
+        console.log("falou" + this.scannedCode); //text
+      } 
+      catch(e){
+        console.log(e);
+      }
+    }
+    scanCode() {
+      this.barcodeScanner.scan().then(barcodeData => {
+        this.scannedCode = barcodeData.text; //texto scanneado  barcodeData.text => texto do qr code
+        this.sayText();
+      }, (err) => {
+          console.log('Error: ', err);
+      });
+  
+    }
 
 }

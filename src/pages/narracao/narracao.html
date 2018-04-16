@@ -16,6 +16,18 @@
 
 
 <ion-content padding>
-  <h1> Aqui ficarão as opções de audio narração </h1>
+  
+  <h6> Opções de audio narração </h6>
+  <button ion-button full color="green"> Fazer o tour </button>
+  <br>
+  <br>
+  <h6> Ler o Qr code para mais informações do animal </h6>
 
+  <button ion-button full icon-left (click)="scanCode()" color="blue"> Leia o Qr Code </button>
+
+  <ion-card *ngIf="scannedCode">
+      <ion-card-content>
+        Resultado do Scan: {{ scannedCode }}
+      </ion-card-content>
+    </ion-card>
 </ion-content>

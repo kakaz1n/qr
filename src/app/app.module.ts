@@ -21,6 +21,7 @@ import { RegrasPage } from '../pages/regras/regras';
 import { EventosPage } from '../pages/eventos/eventos';
 import { NarracaoPage } from '../pages/narracao/narracao';
 import { SobreOAppPage } from '../pages/sobre-o-app/sobre-o-app';
+import { ConfigPage } from '../pages/config/config';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,7 +37,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     RegrasPage,
     EventosPage,
     NarracaoPage,
-    SobreOAppPage
+    SobreOAppPage,
+    ConfigPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     RegrasPage,
     EventosPage,
     NarracaoPage,
-    SobreOAppPage
+    SobreOAppPage,
+    ConfigPage
   ],
   providers: [
     StatusBar,
