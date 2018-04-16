@@ -26,7 +26,7 @@ export class LeitorPage {
           locale: 'pt-BR'//adicionando local brasil pra voz
         }); 
         console.log("falou" + this.scannedCode); //text
-      }
+      } 
       catch(e){
         console.log(e);
       }

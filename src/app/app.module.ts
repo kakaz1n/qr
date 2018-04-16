@@ -14,9 +14,13 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LeitorPage } from '../pages/leitor/leitor';
-
-//import { ListPage } from '../pages/list/list';
-//import { BarcodeScannerPage } from '../pages/barcode-scanner/barcode-scanner';
+import { RecintosPage } from '../pages/recintos/recintos';
+import { HorariosPage } from '../pages/horarios/horarios';
+import { LocalPage } from '../pages/local/local';
+import { RegrasPage } from '../pages/regras/regras';
+import { EventosPage } from '../pages/eventos/eventos';
+import { NarracaoPage } from '../pages/narracao/narracao';
+import { SobreOAppPage } from '../pages/sobre-o-app/sobre-o-app';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,9 +29,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    LeitorPage
-   // ListPage,
-    //BarcodeScannerPage
+    LeitorPage,
+    RecintosPage,
+    HorariosPage,
+    LocalPage,
+    RegrasPage,
+    EventosPage,
+    NarracaoPage,
+    SobreOAppPage
   ],
   imports: [
     BrowserModule,
@@ -39,9 +48,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    LeitorPage
-    //ListPage,
-    //BarcodeScannerPage
+    LeitorPage,
+    HorariosPage,
+    RecintosPage,
+    LocalPage,
+    RegrasPage,
+    EventosPage,
+    NarracaoPage,
+    SobreOAppPage
   ],
   providers: [
     StatusBar,
