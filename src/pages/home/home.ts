@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
+  //templateUrl: 
 })
 export class HomePage {
 
