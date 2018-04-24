@@ -34,25 +34,35 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    blue,
+  secondary:  lightgreen,
+  cor-menu:   darkgreen,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  frango:     yellow
 );
+
+//toolbar-background: secondary;
+//$toolbar-border-color: primary;
+//$toolbar-text-color: yellow;
+//$navbar-active-color: red;
+
+//$navbar-active-color: red; 
+
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$toolbar-ios-text-color: primary;
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+//Cores das barras de navegação
 
 
 
@@ -86,3 +96,4 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+

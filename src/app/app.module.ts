@@ -25,6 +25,9 @@ import { ConfigPage } from '../pages/config/config';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+//import { colors } from '../theme/variables.scss';
+
+//@import "ionic.globals";
 
 @NgModule({
   declarations: [
@@ -45,6 +48,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     IonicModule.forRoot(MyApp),
     HttpModule,
     NgxQRCodeModule
+    //colors
   ],
   bootstrap: [IonicApp],
   entryComponents: [
