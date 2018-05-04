@@ -29,7 +29,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Sobre o Zoo', component: HomePage, icon: "help" },
+      { title: 'Sobre o Zoo', component: HomePage, icon: "none" },
       //{ title: 'Leitor', component: LeitorPage },
       { title: 'Recintos', component: RecintosPage, icon: "planet" },
       { title: 'Ingressos e Horarios', component: HorariosPage, icon: "time" },

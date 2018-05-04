@@ -15,21 +15,23 @@
 </ion-header>
 
 <ion-content padding>
-      <p> Página destinada as configurações do app </p>
+      <!-- <p> Página destinada as configurações do app </p> --> 
+      <br><br>
       <ion-list> 
         <ion-item>
             <ion-label> Notificações sonoras </ion-label>
-            <ion-toggle disabled checked="true"></ion-toggle>
+            <ion-toggle [(ngModel)]="noti"></ion-toggle>
           </ion-item>
           <ion-item>
               <ion-label> Notificações push </ion-label>
-              <ion-toggle disabled checked="true"></ion-toggle>
+              <ion-toggle [(ngModel)]="noti_push"></ion-toggle>
             </ion-item>          
           <ion-item>
               <ion-label> Modo daltonismo </ion-label>
-              <ion-toggle disabled checked="true"></ion-toggle>
+              <ion-toggle [(ngModel)]="dalto"></ion-toggle>
             </ion-item>
           <ion-item>
+            <ion-label> Velocidade da Fala </ion-label>
             <ion-range [(ngModel)]="brightness">
               <ion-icon range-left small name="speedometer"></ion-icon>
               <ion-icon range-right name="speedometer"></ion-icon>
