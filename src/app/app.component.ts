@@ -13,9 +13,10 @@ import { EventosPage } from '../pages/eventos/eventos';
 import { NarracaoPage } from '../pages/narracao/narracao';
 import { SobreOAppPage } from '../pages/sobre-o-app/sobre-o-app';
 import { ConfigPage } from '../pages/config/config'; 
+import { LoginPage } from '../pages/login/login';
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html' 
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
@@ -29,6 +30,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
+      {title: 'Login', component: LoginPage, icon:"login"},
       { title: 'Sobre o Zoo', component: HomePage, icon: "none" },
       //{ title: 'Leitor', component: LeitorPage },
       { title: 'Recintos', component: RecintosPage, icon: "planet" },

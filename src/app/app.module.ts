@@ -7,8 +7,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Toast } from '@ionic-native/toast';
 //import { MyApp } from './app.component';
 //import { HomePage } from '../pages/home/home';
-import {HttpModule, Http } from '@angular/http';
-import {NgxQRCodeModule } from 'ngx-qrcode2';
+//import {HttpModule, Http } from '@angular/http';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 import { MyApp } from './app.component';
@@ -28,6 +27,21 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //import { colors } from '../theme/variables.scss';
 
 //@import "ionic.globals";
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { GooglePlus } from '@ionic-native/google-plus';
+import { LoginPage } from '../pages/login/login';
+import { ComponentsModule } from '../components/components.module';
+
+  // Initialize Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCeX4zf0gf7y5Hi6BtlN77gMVA7-2xPO1w",
+    authDomain: "zoologico-d116b.firebaseapp.com",
+    databaseURL: "https://zoologico-d116b.firebaseio.com",
+    projectId: "zoologico-d116b",
+    storageBucket: "zoologico-d116b.appspot.com",
+    messagingSenderId: "498368104232"
+  };
 
 @NgModule({
   declarations: [
@@ -41,13 +55,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     EventosPage,
     NarracaoPage,
     SobreOAppPage,
-    ConfigPage
+    ConfigPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule,
-    NgxQRCodeModule
+   // HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    ComponentsModule
     //colors
   ],
   bootstrap: [IonicApp],
@@ -58,6 +75,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HorariosPage,
     RecintosPage,
     LocalPage,
+    LoginPage,
     RegrasPage,
     EventosPage,
     NarracaoPage,
@@ -70,7 +88,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner,
     Toast,
-    TextToSpeech
+    TextToSpeech,
+    GooglePlus
   ]
 })
 export class AppModule {}
